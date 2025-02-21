@@ -21,7 +21,7 @@ pipeline {
             steps {
                 script {
                     // Compile the project using Maven
-                    sh "${MAVEN_HOME}/bin/mvn clean compile"
+                    bat "${MAVEN_HOME}/bin/mvn clean compile"
                 }
             }
         }
@@ -30,7 +30,7 @@ pipeline {
             steps {
                 script {
                     // Run unit tests using Maven
-                    sh "${MAVEN_HOME}/bin/mvn test"
+                    bat "${MAVEN_HOME}/bin/mvn test"
                 }
             }
         }
@@ -39,7 +39,7 @@ pipeline {
             steps {
                 script {
                     // Package the application into a JAR/WAR file
-                    sh "${MAVEN_HOME}/bin/mvn package"
+                    bat "${MAVEN_HOME}/bin/mvn package"
                 }
             }
         }
@@ -49,7 +49,7 @@ pipeline {
                 script {
                     // Deploy the packaged application (example with Maven deploy)
                     // Replace this with your actual deploy commands, e.g., deploying to a remote server, AWS, etc.
-                    sh "${MAVEN_HOME}/bin/mvn deploy"
+                    bat "${MAVEN_HOME}/bin/mvn deploy"
                 }
             }
         }
