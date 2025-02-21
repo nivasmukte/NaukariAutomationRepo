@@ -1,9 +1,12 @@
 pipeline {
     agent any
     
-    environment {
-        // Define any necessary environment variables here
-        MAVEN_HOME = tool name: 'Maven 3.8.8', type: 'Tool'  // Specify Maven version
+    // environment {
+    //     // Define any necessary environment variables here
+    //     MAVEN_HOME = tool name: 'Maven 3.8.8', type: 'Tool'  // Specify Maven version
+    // }
+    tools{
+        maven 'Maven 3.8.8'
     }
 
     stages {
